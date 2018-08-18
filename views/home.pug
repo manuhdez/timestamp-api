@@ -1,0 +1,13 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title Timestamp microservice
+  body
+    h1 API Project: Timestamp Microservice
+    form(action="/", method="post")
+      label(for="date") Enter a date or timestamp:
+        input(type="text", placeholder="12-03-2003 or 1451001600000")
+        button(type="submit") Submit

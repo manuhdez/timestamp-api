@@ -8,7 +8,7 @@ app.set('view engine', 'pug');
 
 // ******* Routes ***********
 app.get('/', (req, res) => {
-  res.send('Hello world!');
+  res.render('home');
 });
 
 // ******* Server init ********
