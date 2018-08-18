@@ -9,7 +9,7 @@
 	},
 	"author": "manuhdez",
 	"license": "ISC",
-	"devDependencies": {
+	"dependencies": {
 		"body-parser": "^1.18.3",
 		"express": "^4.16.3",
 		"pug": "^2.0.3"
