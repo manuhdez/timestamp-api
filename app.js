@@ -11,10 +11,20 @@ app.get('/', (req, res) => {
   res.render('home');
 });
 
-app.post('/', (req, res) => {
+app.post('/api/timestamp', (req, res) => {
   const userReq = req.body["date-string"];
+  const dateFormatted = new Date(userReq);
   const data = {};
-  res.json();
+
+  if (userReq) {
+    data.unix = dateFormatted.getTime();
+    data.utc = dateFormatted.toUTCString();
+  } else {
+    data.utc = new Date();
+    data.unix= Date.now();
+  }
+
+  res.json(data);
 });
 
 // ******* Server init ********
