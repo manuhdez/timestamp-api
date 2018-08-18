@@ -11,8 +11,14 @@ app.get('/', (req, res) => {
   res.render('home');
 });
 
+app.post('/', (req, res) => {
+  const userReq = req.body["date-string"];
+  const data = {};
+  res.json();
+});
+
 // ******* Server init ********
 const port = process.env.PORT || 3000;
 app.listen(3000, () => {
   console.log('App running on port 3000');
-})
+});
