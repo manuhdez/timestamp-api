@@ -7,3 +7,12 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.set('view engine', 'pug');
 
 // ******* Routes ***********
+app.get('/', (req, res) => {
+  res.send('Hello world!');
+});
+
+// ******* Server init ********
+const port = process.env.PORT || 3000;
+app.listen(3000, () => {
+  console.log('App running on port 3000');
+})
