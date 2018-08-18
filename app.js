@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const app = express();
 app.use(bodyParser.urlencoded({extended: false}));
 app.set('view engine', 'pug');
+app.use('/static', express.static('public'));
 
 // ******* Routes ***********
 app.get('/', (req, res) => {

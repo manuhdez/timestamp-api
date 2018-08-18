@@ -5,9 +5,10 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
     title Timestamp microservice
+    link(rel="stylesheet", href="/static/css/style.css")
   body
     h1 API Project: Timestamp Microservice
     form(action="/api/timestamp", method="post")
       label(for="date") Enter a date or timestamp:
-        input(type="text", placeholder="12-03-2003 or 1451001600000", name="date-string")
-        button(type="submit") Submit
+      input(type="text", placeholder="i.e. 12-03-2003", name="date-string")
+      button(type="submit") Accept
